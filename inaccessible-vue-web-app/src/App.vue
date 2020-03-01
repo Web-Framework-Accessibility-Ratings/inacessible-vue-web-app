@@ -9,6 +9,10 @@
       <button class="links" v-on:click="updateComponent('InputPurpose')">Incorrect Input Purpose</button>
       <button class="links" v-on:click="updateComponent('IdentifyPurpose')">No Purpose on Elements</button>
       <button class="links" v-on:click="updateComponent('UseOfColor')">No Use of Color</button>
+      <button class="links" v-on:click="updateComponent('AudioControl')">No Audio Control</button>
+      <button class="links" v-on:click="updateComponent('ColorContrastMinimum')">Insuffcient Color Constrast</button>
+      <button class="links" v-on:click="updateComponent('TextResize')">Text Resize</button>
+      <button class="links" v-on:click="updateComponent('ImageOfText')">Image Of Text</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -23,6 +27,10 @@ import MeaningfulSequence from './components/1.3.2MeaningfulSequence.vue';
 import InputPurpose from './components/1.3.5InputPurpose.vue';
 import IdentifyPurpose from './components/1.3.6IdentifyPurpose.vue';
 import UseOfColor from './components/1.4.1UseOfColor';
+import AudioControl from './components/1.4.2AudioControl';
+import ColorContrastMinimum from './components/1.4.3ColorContrastMinimum';
+import TextResize from './components/1.4.4TextResize';
+import ImageOfText from './components/1.4.5ImageOfText';
 
 export default {
   name: 'App',
@@ -32,7 +40,11 @@ export default {
     MeaningfulSequence,
     InputPurpose,
     IdentifyPurpose,
-    UseOfColor
+    UseOfColor,
+    AudioControl,
+    ColorContrastMinimum,
+    TextResize,
+    ImageOfText
   },
   data: function() {
     return {
