@@ -13,6 +13,8 @@
       <button class="links" v-on:click="updateComponent('ColorContrastMinimum')">Insuffcient Color Constrast</button>
       <button class="links" v-on:click="updateComponent('TextResize')">Text Resize</button>
       <button class="links" v-on:click="updateComponent('ImageOfText')">Image Of Text</button>
+      <button class="links" v-on:click="updateComponent('ColorContrastEnhanced')">Color Contrast Enhanced</button>
+      <button class="links" v-on:click="updateComponent('VisualPresentation')">Visual Presentation</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -31,6 +33,8 @@ import AudioControl from './components/1.4.2AudioControl';
 import ColorContrastMinimum from './components/1.4.3ColorContrastMinimum';
 import TextResize from './components/1.4.4TextResize';
 import ImageOfText from './components/1.4.5ImageOfText';
+import ColorContrastEnhanced from './components/1.4.6ColorContrastEnhanced.vue';
+import VisualPresentation from './components/1.4.8VisualPresentation.vue';
 
 export default {
   name: 'App',
@@ -44,7 +48,9 @@ export default {
     AudioControl,
     ColorContrastMinimum,
     TextResize,
-    ImageOfText
+    ImageOfText,
+    ColorContrastEnhanced,
+    VisualPresentation
   },
   data: function() {
     return {
