@@ -17,6 +17,7 @@
       <button class="links" v-on:click="updateComponent('VisualPresentation')">Visual Presentation</button>
       <button class="links" v-on:click="updateComponent('NonTextContrast')">Non Text Contrast</button>
       <button class="links" v-on:click="updateComponent('TextSpacing')">Text Spacing</button>
+      <button class="links" v-on:click="updateComponent('Keyboard')">Keyboard</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -39,6 +40,7 @@ import ColorContrastEnhanced from './components/1.4.6ColorContrastEnhanced.vue';
 import VisualPresentation from './components/1.4.8VisualPresentation.vue';
 import NonTextContrast from './components/1.4.11NonTextContrast.vue';
 import TextSpacing from './components/1.4.12TextSpacing.vue';
+import Keyboard from './components/2.1.1Keyboard';
 
 export default {
   name: 'App',
@@ -56,7 +58,8 @@ export default {
     ColorContrastEnhanced,
     VisualPresentation,
     NonTextContrast,
-    TextSpacing
+    TextSpacing,
+    Keyboard
   },
   data: function() {
     return {
