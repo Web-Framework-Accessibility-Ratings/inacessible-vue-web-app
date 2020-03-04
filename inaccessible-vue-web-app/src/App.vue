@@ -19,6 +19,7 @@
       <button class="links" v-on:click="updateComponent('TextSpacing')">Text Spacing</button>
       <button class="links" v-on:click="updateComponent('Keyboard')">Keyboard</button>
       <button class="links" v-on:click="updateComponent('KeyboardTrap')">Keyboard Trap</button>
+      <button class="links" v-on:click="updateComponent('ShortCut')">Shortcut</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -43,6 +44,7 @@ import NonTextContrast from './components/1.4.11NonTextContrast.vue';
 import TextSpacing from './components/1.4.12TextSpacing.vue';
 import Keyboard from './components/2.1.1Keyboard.vue';
 import KeyboardTrap from './components/2.1.2KeyboardTrap.vue';
+import ShortCut from './components/2.1.4ShortCut.vue';
 
 export default {
   name: 'App',
@@ -62,7 +64,8 @@ export default {
     NonTextContrast,
     TextSpacing,
     Keyboard,
-    KeyboardTrap
+    KeyboardTrap,
+    ShortCut
   },
   data: function() {
     return {
