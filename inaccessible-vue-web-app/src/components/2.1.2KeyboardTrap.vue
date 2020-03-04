@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>An input that cannot be selected.</h1>
+        <h1>A keyboard trap you cannot escape.</h1>
         <p>
             <label>
                 Name
