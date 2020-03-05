@@ -20,6 +20,8 @@
       <button class="links" v-on:click="updateComponent('Keyboard')">Keyboard</button>
       <button class="links" v-on:click="updateComponent('KeyboardTrap')">Keyboard Trap</button>
       <button class="links" v-on:click="updateComponent('ShortCut')">Shortcut</button>
+      <button class="links" v-on:click="updateComponent('TimeAdjustable')">Time Adjustable</button>
+      <button class="links" v-on:click="updateComponent('PauseStopHide')">Pause Stop Hide</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -45,6 +47,8 @@ import TextSpacing from './components/1.4.12TextSpacing.vue';
 import Keyboard from './components/2.1.1Keyboard.vue';
 import KeyboardTrap from './components/2.1.2KeyboardTrap.vue';
 import ShortCut from './components/2.1.4ShortCut.vue';
+import TimeAdjustable from './components/2.2.1TimeAdjustable';
+import PauseStopHide from './components/2.2.2PauseStopHide';
 
 export default {
   name: 'App',
@@ -65,7 +69,9 @@ export default {
     TextSpacing,
     Keyboard,
     KeyboardTrap,
-    ShortCut
+    ShortCut,
+    TimeAdjustable,
+    PauseStopHide
   },
   data: function() {
     return {
