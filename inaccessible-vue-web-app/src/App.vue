@@ -22,6 +22,7 @@
       <button class="links" v-on:click="updateComponent('ShortCut')">Shortcut</button>
       <button class="links" v-on:click="updateComponent('TimeAdjustable')">Time Adjustable</button>
       <button class="links" v-on:click="updateComponent('PauseStopHide')">Pause Stop Hide</button>
+      <button class="links" v-on:click="updateComponent('ThreeFlashes')">Three Flashes</button>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -49,6 +50,7 @@ import KeyboardTrap from './components/2.1.2KeyboardTrap.vue';
 import ShortCut from './components/2.1.4ShortCut.vue';
 import TimeAdjustable from './components/2.2.1TimeAdjustable';
 import PauseStopHide from './components/2.2.2PauseStopHide';
+import ThreeFlashes from './components/2.3.1ThreeFlashes'
 
 export default {
   name: 'App',
@@ -71,7 +73,8 @@ export default {
     KeyboardTrap,
     ShortCut,
     TimeAdjustable,
-    PauseStopHide
+    PauseStopHide,
+    ThreeFlashes
   },
   data: function() {
     return {
