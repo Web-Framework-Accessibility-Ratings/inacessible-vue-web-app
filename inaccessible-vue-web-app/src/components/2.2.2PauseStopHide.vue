@@ -18,7 +18,7 @@ const change = () => {
         color = "red";
         x = 2;
     } else {
-        color = "green";
+        color = "#00FA00";
         x = 1;
     }
 

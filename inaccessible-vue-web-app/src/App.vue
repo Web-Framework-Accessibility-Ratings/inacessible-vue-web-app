@@ -2,27 +2,44 @@
   <div class="containerStyle">
     <div class="navPanel">
       <img alt="Vue logo" src="./assets/logo.png">
-      <button class="links" v-on:click="updateComponent('')">None</button>
-      <button class="links" v-on:click="updateComponent('ImgNoAlt')">Text Alternatives</button>
-      <button class="links" v-on:click="updateComponent('InfoRelationship')">Information and Relationships</button>
-      <button class="links" v-on:click="updateComponent('MeaningfulSequence')">Meaningul Sequence</button>
-      <button class="links" v-on:click="updateComponent('InputPurpose')">Incorrect Input Purpose</button>
-      <button class="links" v-on:click="updateComponent('IdentifyPurpose')">No Purpose on Elements</button>
-      <button class="links" v-on:click="updateComponent('UseOfColor')">No Use of Color</button>
-      <button class="links" v-on:click="updateComponent('AudioControl')">No Audio Control</button>
-      <button class="links" v-on:click="updateComponent('ColorContrastMinimum')">Insuffcient Color Constrast</button>
-      <button class="links" v-on:click="updateComponent('TextResize')">Text Resize</button>
-      <button class="links" v-on:click="updateComponent('ImageOfText')">Image Of Text</button>
-      <button class="links" v-on:click="updateComponent('ColorContrastEnhanced')">Color Contrast Enhanced</button>
-      <button class="links" v-on:click="updateComponent('VisualPresentation')">Visual Presentation</button>
-      <button class="links" v-on:click="updateComponent('NonTextContrast')">Non Text Contrast</button>
-      <button class="links" v-on:click="updateComponent('TextSpacing')">Text Spacing</button>
-      <button class="links" v-on:click="updateComponent('Keyboard')">Keyboard</button>
-      <button class="links" v-on:click="updateComponent('KeyboardTrap')">Keyboard Trap</button>
-      <button class="links" v-on:click="updateComponent('ShortCut')">Shortcut</button>
-      <button class="links" v-on:click="updateComponent('TimeAdjustable')">Time Adjustable</button>
-      <button class="links" v-on:click="updateComponent('PauseStopHide')">Pause Stop Hide</button>
-      <button class="links" v-on:click="updateComponent('ThreeFlashes')">Three Flashes</button>
+      <div id='links' role='navigation'>
+        <button class="links" v-on:click="updateComponent('')">None</button>
+        <button class="links" v-on:click="updateComponent('ImgNoAlt')">Text Alternatives</button>
+        <button class="links" v-on:click="updateComponent('InfoRelationship')">Information and Relationships</button>
+        <button class="links" v-on:click="updateComponent('MeaningfulSequence')">Meaningul Sequence</button>
+        <button class="links" v-on:click="updateComponent('InputPurpose')">Incorrect Input Purpose</button>
+        <button class="links" v-on:click="updateComponent('IdentifyPurpose')">No Purpose on Elements</button>
+        <button class="links" v-on:click="updateComponent('UseOfColor')">No Use of Color</button>
+        <button class="links" v-on:click="updateComponent('AudioControl')">No Audio Control</button>
+        <button class="links" v-on:click="updateComponent('ColorContrastMinimum')">Insuffcient Color Constrast</button>
+        <button class="links" v-on:click="updateComponent('TextResize')">Text Resize</button>
+        <button class="links" v-on:click="updateComponent('ImageOfText')">Image Of Text</button>
+        <button class="links" v-on:click="updateComponent('ColorContrastEnhanced')">Color Contrast Enhanced</button>
+        <button class="links" v-on:click="updateComponent('VisualPresentation')">Visual Presentation</button>
+        <button class="links" v-on:click="updateComponent('NonTextContrast')">Non Text Contrast</button>
+        <button class="links" v-on:click="updateComponent('TextSpacing')">Text Spacing</button>
+        <button class="links" v-on:click="updateComponent('Keyboard')">Keyboard</button>
+        <button class="links" v-on:click="updateComponent('KeyboardTrap')">Keyboard Trap</button>
+        <button class="links" v-on:click="updateComponent('ShortCut')">Shortcut</button>
+        <button class="links" v-on:click="updateComponent('TimeAdjustable')">Time Adjustable</button>
+        <button class="links" v-on:click="updateComponent('PauseStopHide')">Pause Stop Hide</button>
+        <button class="links" v-on:click="updateComponent('ThreeFlashes')">Three Flashes</button>
+        <button class="links" v-on:click="updateComponent('BypassBlock')">Bypass Block</button>
+        <button class="links" v-on:click="updateComponent('FocusOrder')">Focus Order</button>
+        <button class="links" v-on:click="updateComponent('LinkPurpose')">Link Purpose</button>
+        <button class="links" v-on:click="updateComponent('HeadingsLabels')">Headings and Labels</button>
+        <button class="links" v-on:click="updateComponent('LabelInName')">Label in Name</button>
+        <button class="links" v-on:click="updateComponent('PageLang')">Page Language</button>
+        <button class="links" v-on:click="updateComponent('PartLang')">Part Language</button>
+        <button class="links" v-on:click="updateComponent('OnInput')">On Input</button>
+        <button class="links" v-on:click="updateComponent('ConsistentNavigation')">Consistent Navigation</button>
+        <button class="links" v-on:click="updateComponent('ConsistentIdentification')">Consistent Identification</button>
+        <button class="links" v-on:click="updateComponent('ErrorIdentification')">Error Identification</button>
+        <button class="links" v-on:click="updateComponent('LabelsInstructions')">Labels and Instructions</button>
+        <button class="links" v-on:click="updateComponent('Parsing')">Parsing</button>
+        <button class="links" v-on:click="updateComponent('NameRoleValue')">Name Role Value</button>
+        <button class="links" v-on:click="updateComponent('Status')">Status</button>
+      </div>
     </div>
     <div class="inaccessibleContent">
       <component v-bind:is="currentComponent"/>
@@ -50,7 +67,22 @@ import KeyboardTrap from './components/2.1.2KeyboardTrap.vue';
 import ShortCut from './components/2.1.4ShortCut.vue';
 import TimeAdjustable from './components/2.2.1TimeAdjustable';
 import PauseStopHide from './components/2.2.2PauseStopHide';
-import ThreeFlashes from './components/2.3.1ThreeFlashes'
+import ThreeFlashes from './components/2.3.1ThreeFlashes';
+import BypassBlock from './components/2.4.1BypassBlock.vue';
+import FocusOrder from './components/2.4.3FocusOrder.vue';
+import LinkPurpose from './components/2.4.4LinkPurpose';
+import HeadingsLabels from './components/2.4.6HeadingsLabels';
+import LabelInName from './components/2.5.3LabelInName';
+import PageLang from './components/3.1.3PageLang.vue';
+import PartLang from './components/3.1.2PartLang';
+import OnInput from './components/3.2.2OnInput';
+import ConsistentNavigation from './components/3.2.3ConsistentNavigation';
+import ConsistentIdentification from './components/3.2.4ConsistentIdentification';
+import ErrorIdentification from './components/3.3.1ErrorIdentification';
+import LabelsInstructions from './components/3.3.2LabelsInstructions';
+import Parsing from './components/4.1.1Parsing';
+import NameRoleValue from './components/4.1.2NameRoleValue';
+import Status from './components/4.1.3Status';
 
 export default {
   name: 'App',
@@ -74,7 +106,22 @@ export default {
     ShortCut,
     TimeAdjustable,
     PauseStopHide,
-    ThreeFlashes
+    ThreeFlashes,
+    BypassBlock,
+    FocusOrder,
+    LinkPurpose,
+    HeadingsLabels,
+    LabelInName,
+    PageLang,
+    PartLang,
+    OnInput,
+    ConsistentNavigation,
+    ConsistentIdentification,
+    ErrorIdentification,
+    LabelsInstructions,
+    Parsing,
+    NameRoleValue,
+    Status
   },
   data: function() {
     return {
@@ -115,5 +162,10 @@ export default {
   .links{
     width: 70%;
     align-self: center;
+  }
+
+  #links{
+    display: flex;
+    flex-direction: column;
   }
 </style>
